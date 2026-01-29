@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs-20_x", "yarn"]
+
+[phases.install]
+cmds = ["yarn install"]
+
+[phases.build]
+cmds = ["yarn build", "cd examples/getstarted && yarn build"]
+
+[start]
+cmd = "cd examples/getstarted && yarn start"
